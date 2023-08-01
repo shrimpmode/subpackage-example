@@ -1,0 +1,48 @@
+{
+  "name": "firstpackagerasealma",
+  "version": "1.0.1",
+  "description": "test packages ",
+  "typings": "dist/index.d.ts",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:css": "stylelint \"src/**/*.styles.{js,jsx,ts,tsx}\" --max-warnings=0",
+    "lint:js": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --max-warnings=0 --fix",
+    "lint": "npm run lint:js && npm run lint:css",
+    "build": "rollup -c",
+    "release": "release-it"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "eslint": "^8.17.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-mdx": "^2.0.5",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "release-it": "^16.1.3",
+    "rollup": "^2.42.1",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "stylelint": "^14.9.0",
+    "stylelint-config-recommended": "^8.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0",
+    "typescript": "^4.9.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/almarcesiblelu/subpackage-example.git"
+  },
+  "author": "rase",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/almarcesiblelu/subpackage-example/issues"
+  },
+  "homepage": "https://github.com/almarcesiblelu/subpackage-example#readme"
+}

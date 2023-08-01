@@ -1,0 +1,142 @@
+{
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "mdx/code-blocks": true
+  },
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 11,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "arrowFunctions": true,
+      "classes": true,
+      "defaultParams": true,
+      "destructuring": true,
+      "forOf": true,
+      "experimentalObjectRestSpread": true,
+      "jsx": true,
+      "modules": true,
+      "spread": true,
+      "templateStrings": true
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:mdx/recommended"
+  ],
+  "plugins": [
+    "jsx-a11y",
+    "react",
+    "@typescript-eslint",
+    "simple-import-sort",
+    "import"
+  ],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "rules": {
+    "arrow-body-style": ["error", "as-needed"],
+    "arrow-spacing": "warn",
+    "block-scoped-var": "error",
+    "block-spacing": "warn",
+    "camelcase": "warn",
+    "comma-dangle": [1, "never"],
+    "default-case": "warn",
+    "new-cap": "off",
+    "eqeqeq": "warn",
+    "jsx-quotes": [1, "prefer-single"],
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/no-autofocus": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "no-console": "off",
+    "no-dupe-args": "error",
+    "no-dupe-keys": "error",
+    "no-duplicate-case": "error",
+    "no-duplicate-imports": "error",
+    "no-else-return": "warn",
+    "no-extra-boolean-cast": "error",
+    "no-extra-bind": "error",
+    "no-extra-semi": "warn",
+    "no-invalid-regexp": "error",
+    "no-return-await": "error",
+    "no-unused-expressions": [
+      "error",
+      { "allowShortCircuit": true, "allowTernary": true }
+    ],
+    "no-useless-computed-key": "warn",
+    "no-useless-concat": "warn",
+    "no-useless-escape": "warn",
+    "no-unreachable": "error",
+    "no-useless-rename": "warn",
+    "no-useless-return": "warn",
+    "no-unused-vars": "error",
+    "prefer-destructuring": "warn",
+    "prefer-spread": "warn",
+    "prefer-template": "warn",
+    "react/display-name": 0,
+    "react/forbid-foreign-prop-types": 0,
+    "react/jsx-uses-vars": "error",
+    "react/jsx-uses-react": "error",
+    "react/jsx-no-duplicate-props": "error",
+    "react/no-access-state-in-setstate": 2,
+    "react/no-array-index-key": 1,
+    "react/no-deprecated": 2,
+    "react/no-did-mount-set-state": 2,
+    "react/no-did-update-set-state": 2,
+    "react/no-direct-mutation-state": ["error", "always"],
+    "react/no-redundant-should-component-update": 2,
+    "react/no-this-in-sfc": 2,
+    "react/no-typos": 2,
+    "react/no-unknown-property": 1,
+    "react/no-unused-prop-types": 1,
+    "react/no-unused-state": 2,
+    "react/prefer-es6-class": ["error", "always"],
+    "react/require-render-return": 2,
+    "semi": ["error", "never"],
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          // Packages. `react` related packages come first.
+          ["^react", "^@?\\w"],
+          // Internal packages.
+          ["^(@|@company|@ui|components|utils|config|vendored-lib)(/.*|$)"],
+          // Side effect imports.
+          ["^\\u0000"],
+          // Parent imports. Put `..` last.
+          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+          // Other relative imports. Put same-folder imports and `.` last.
+          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+          // Style imports.
+          ["^.+\\.s?css$"]
+        ]
+      }
+    ],
+    "space-before-function-paren": "error",
+    "strict": ["error", "global"],
+    "wrap-iife": "warn",
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/no-var-requires": 0
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "rules": {
+        "@typescript-eslint/ban-ts-comment": 0,
+        "no-unused-vars": 0,
+        "react/prop-types": 0
+      }
+    }
+  ],
+  "globals": {}
+}

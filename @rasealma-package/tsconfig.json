@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "themes": ["src/themes"],
+      "components": ["src/components"],
+      "assets": ["src/assets"]
+    },
+    "jsx": "react",
+    "declaration": true,
+    "target": "es6",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "ESNext",
+    "strict": true,
+    "noImplicitAny": false,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "skipLibCheck": true,
+    "types": ["node"]
+  },
+  "exclude": ["src/**/*.stories.tsx", "src/**/*.test.tsx", "src/**/*.test.ts"],
+  "include": ["src", "emotion.d.ts", "svg.d.ts"]
+}
